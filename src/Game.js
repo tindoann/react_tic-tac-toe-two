@@ -7,7 +7,7 @@ class Game extends React.Component {
         squares: Array(9).fill(null)
       }
       ], 
-      stepNumber: 0, 
+      stepNumber: 0, // added to nextStep
       xIsNext: true
     }; 
   }
