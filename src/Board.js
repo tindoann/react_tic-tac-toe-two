@@ -1,8 +1,23 @@
 class Board extends React.Component {
   // Each time a player moves, xIsNext(boolean) will be flipped to determine which player goes next and the game's state will be saved. 
+    constructor(props) {
+      super(props); 
+      this.state = { 
+        squares: Array(9).fill(null), 
+        xIsNext: true, 
+      }; 
+    }
+
+    handleClick(i) {
+      const squares = this.state.squares.slice(); 
+      square[i] = this.state.xIsNext ? 'X' : 'O'; 
+      this.setState({
+        squares: squares, 
+        xIsNext: !this.state.xIsNext,
+      }); 
+    }
 
   renderSquare(i) {
-    renderSquare(i) {
       return (
         <Square value={this.state.squares[i]}
         onClick={() => this.props.onClick(i)}
@@ -10,7 +25,10 @@ class Board extends React.Component {
       ); 
     }
 
+  // display which player's turn it is 
+    
   render() {
+    const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O'); 
       return (
         <div>
           <div className="board-row">
@@ -76,3 +94,9 @@ class Board extends React.Component {
     }
 */
 
+// helper function 
+
+/* 
+
+
+}

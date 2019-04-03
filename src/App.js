@@ -54,3 +54,7 @@ class App extends Component {
     })
     return winningCombos.find(function(combo) {
       if(symbols(combo[[0] !== "" && symbols[combo[1] !== "" && symbols[combo[2] !=="" && symbols[combo]]    }
+
+
+    /* Every time a player moves, xIsNext (a boolean) will be flipped to determine which player
+    goes next and the game's state will be saved. 

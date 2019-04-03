@@ -17,7 +17,6 @@ function Square(props) {
     </button>
   ); 
 }
-
   
 
 /* By calling this.setState from an onClick handler in the Square's render method, we 
